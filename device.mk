@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
     device/nextbit/ether/rootdir/init.qcom.usb.sh:root/init.qcom.usb.sh \
     device/nextbit/ether/rootdir/ueventd.qcom.rc:root/ueventd.qcom.rc
 
+# BT
+PRODUCT_COPY_FILES += \
+    device/nextbit/ether/rootdir/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+
 # Audio
 PRODUCT_COPY_FILES += \
     device/nextbit/ether/audio/audio_policy.conf:system/etc/audio_policy.conf \
@@ -123,6 +127,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio HAL and utilities
 PRODUCT_PACKAGES += \
+    audiod \
     audio.primary.msm8992 \
     audio.a2dp.default \
     audio.usb.default \
@@ -169,6 +174,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVidEnc \
     libstagefright
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    fingerprintd
 
 # GPS packages
 PRODUCT_PACKAGES += \
