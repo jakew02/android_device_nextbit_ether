@@ -441,3 +441,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += telephony-ext
 PRODUCT_PACKAGES += ims-ext-common
 PRODUCT_BOOT_JARS += telephony-ext
+
+PRODUCT_COPY_FILES += \
+    device/nextbit/ether/rootdir/bin/init.nbq.mac.sh:system/bin/init.nbq.mac.sh \
+    device/nextbit/ether/rootdir/bin/init.nbq.power.sh:system/bin/init.nbq.power.sh
