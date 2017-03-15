@@ -160,6 +160,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     memtrack.msm8992 \
 
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-impl
+
 # Extra tools
 PRODUCT_PACKAGES += \
     tinycap \
