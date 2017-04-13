@@ -64,7 +64,7 @@ TARGET_KERNEL_CONFIG := omni_ether_defconfig
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_ARCH := arm64
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
@@ -113,6 +113,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_USES_ALSA_AUDIO := true
 
+BOARD_SUPPORTS_SOUND_TRIGGER := false
 SNDRV_COMPRESS_SET_NEXT_TRACK_PARAM := true
 
 # Bluetooth
@@ -210,6 +211,9 @@ TARGET_PROVIDES_POWERHAL := true
 TARGET_USES_INTERACTION_BOOST := true
 
 BOARD_SECCOMP_POLICY += $(BOARD_PATH)/seccomp
+
+
+USE_SENSOR_MULTI_HAL := true
 
 # Include system properties in separate system.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop

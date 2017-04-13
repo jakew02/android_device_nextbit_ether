@@ -917,3 +917,8 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/qcril.db
+-framework/WfdCommon.jar
+-framework/com.qualcomm.location.vzw_library.jar
+-framework/org.codeaurora.camera.jar
+etc/permissions/com.qualcomm.location.vzw_library.xml
+

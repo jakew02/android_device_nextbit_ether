@@ -102,12 +102,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audiod \
+    libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessingdescriptors \
     libqcomvoiceprocessing
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s \
@@ -140,12 +141,15 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    libhdmi \
     copybit.msm8992 \
     gralloc.msm8992 \
     hwcomposer.msm8992 \
     liboverlay \
     libqdutils \
     libqdMetaData \
+    libmemalloc \
+    libqservice \
     memtrack.msm8992 \
 
 # Extra tools
@@ -189,7 +193,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libstagefrighthw \
     libc2dcolorconvert \
     libdivxdrmdecrypt \
     libOmxAacEnc \
@@ -197,8 +200,12 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxSwVencMpeg4 \
     libOmxVdec \
+    libOmxVdecHevc \
     libOmxVenc \
+    libOmxVidcCommon \
+    libmm-omxcore \
     libstagefrighthw
 
 PRODUCT_COPY_FILES += \
@@ -235,11 +242,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes \
-    libbson \
     libcnefeatureconfig \
-    libnl_2 \
     libprotobuf-cpp-full \
-    libqsap_sdk \
     librmnetctl \
     libxml2
 
@@ -265,3 +269,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+PRODUCT_PACKAGES += \
+    sensors.msm8992
