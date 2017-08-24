@@ -257,6 +257,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config \
 
+# RIL
+PRODUCT_PACKAGES += \
+    rild_socket
+
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
