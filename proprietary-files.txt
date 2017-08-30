@@ -132,10 +132,10 @@ lib64/hw/sensors.msm8992.so
 lib64/libcom_fingerprints_service.so
 lib64/libFIHNxp.so
 lib64/lib_fpc_tac_shared.so
--lib64/libloc_api_v02.so
--lib64/libloc_ds_api.so
 lib64/libgps.utils.so
+-lib64/libloc_api_v02.so
 lib64/libloc_core.so
+-lib64/libloc_ds_api.so
 lib64/libloc_eng.so
 lib64/libtfa98xx_hal.so
 lib64/libtfa98xx.so
@@ -146,10 +146,10 @@ lib/hw/sensors.msm8992.so
 lib/libcom_fingerprints_service.so
 lib/libFIHNxp.so
 lib/lib_fpc_tac_shared.so
--lib/libloc_api_v02.so
--lib/libloc_ds_api.so
 lib/libgps.utils.so
+-lib/libloc_api_v02.so
 lib/libloc_core.so
+-lib/libloc_ds_api.so
 lib/libloc_eng.so
 lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
@@ -313,6 +313,7 @@ vendor/lib64/libOmxMux.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libperipheral_client.so
+vendor/lib64/libprotobuf-cpp-preo.so|ae906ddf6ff9096350c172deea0208e28567dac7
 vendor/lib64/libpvr.so
 vendor/lib64/libQBLAS-0.11.38.so
 vendor/lib64/libqcci_legacy.so
@@ -360,7 +361,7 @@ vendor/lib64/libsecureuisvc_jni.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
-vendor/lib64/libsettings.so
+vendor/lib64/libsettings.so|ff2a1b2352e8167b24fa10ce6201ca11e2627537
 vendor/lib64/libsi.so
 vendor/lib64/libslimclient.so
 vendor/lib64/libsmemlog.so
