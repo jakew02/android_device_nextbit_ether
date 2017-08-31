@@ -215,9 +215,9 @@ vendor/lib64/libc2d30-a4xx.so
 vendor/lib64/libCB.so
 vendor/lib64/libchromatix_s5k3m2xm_versions.so
 vendor/lib64/libchromatix_s5k5e2_versions.so
-vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneapiclient.so|4d658b41e57be1134c9976efd6aa567af6ad07a0 
 vendor/lib64/libcneqmiutils.so
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so|036ca1713cbb6224ccd8e4acd7ee1c26fe27e7d1 
 vendor/lib64/libCommandSvc.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libconnctrl.so
@@ -313,6 +313,7 @@ vendor/lib64/libOmxMux.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libperipheral_client.so
+vendor/lib64/libprotobuf-cpp-lpro.so|759e9741c10993c071d966c7e485c53afe090480
 vendor/lib64/libprotobuf-cpp-preo.so|ae906ddf6ff9096350c172deea0208e28567dac7
 vendor/lib64/libpvr.so
 vendor/lib64/libQBLAS-0.11.38.so
