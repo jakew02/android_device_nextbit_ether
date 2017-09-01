@@ -4,7 +4,7 @@
 -app/TimeService/TimeService.apk
 bin/adsprpcd
 bin/btnvtool
-bin/cnd
+bin/cnd|561e58951d32a018f0811d4c6c2a637079e45cc4
 bin/cnss-daemon
 bin/cnss_diag
 bin/dpmd
