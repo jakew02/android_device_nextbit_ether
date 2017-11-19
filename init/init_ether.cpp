@@ -38,7 +38,7 @@ static int read_file2(const char *fname, char *data)
 {
     FILE * file = std::fopen(fname, "r");
     if (file == NULL) {
-        ERROR("failed to open '%s'\n", fname);
+        LOG(ERROR) << "failed to open" << fname << "\n";
         return 0;
     }
 
