@@ -98,7 +98,10 @@ PRODUCT_PACKAGES += \
     audio_policy.msm8992 \
     audio.r_submix.default \
     audio.usb.default \
-    audio_amplifier.msm8992
+    audio_amplifier.msm8992 \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl
 
 PRODUCT_PACKAGES += \
     audiod \
@@ -131,9 +134,25 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/acdbdata/$(ACDB_TARGET)_Headset_cal.acdb:system/etc/acdbdata/$(ACDB_TARGET)/$(ACDB_TARGET)_Headset_cal.acdb \
     $(LOCAL_PATH)/audio/acdbdata/$(ACDB_TARGET)_Speaker_cal.acdb:system/etc/acdbdata/$(ACDB_TARGET)/$(ACDB_TARGET)_Speaker_cal.acdb
 
+# Bluetooth HAL
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
+# Sensor & activity_recognition HAL
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.contexthub@1.0-impl
+
+
+# new gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
+
 # Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera
+    SnapdragonCamera \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -152,6 +171,23 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData \
     memtrack.msm8992 \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.memtrack@1.0-impl
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -167,7 +203,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    fingerprintd \
+    android.hardware.biometrics.fingerprint@2.1-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
@@ -176,6 +213,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/xtwifi.conf:system/etc/xtwifi.conf
+
+#GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
+#USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -188,7 +233,12 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8992
+    lights.msm8992 \
+    android.hardware.light@2.0-impl
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # Media
 PRODUCT_PACKAGES += \
@@ -222,7 +272,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     nfc_nci.qcom \
     NfcNci \
-    Tag
+    Tag \
+    android.hardware.nfc@1.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
@@ -235,7 +286,11 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.ether
+    power.ether \
+    android.hardware.power@1.0-impl \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    android.hardware.health@1.0-impl
 
 # RIL/Connectivity
 PRODUCT_PACKAGES += \
@@ -247,7 +302,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libqsap_sdk \
     librmnetctl \
-    libxml2
+    libxml2 \
 
 # Security Config
 PRODUCT_COPY_FILES += \
@@ -259,7 +314,9 @@ PRODUCT_PACKAGES += \
     hostapd \
     libwpa_client \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-supplicant
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
@@ -271,3 +328,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/wifi/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+PRODUCT_PACKAGES += android.hidl.manager@1.0-java
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
