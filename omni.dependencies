@@ -13,24 +13,6 @@
   },
   {
     "remote": "omnirom",
-    "repository": "android_hardware_qcom_audio-caf-msm8992",
-    "target_path": "hardware/qcom/audio-caf-msm8992",
-    "revision": "android-8.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_display-caf-msm8992",
-    "target_path": "hardware/qcom/display-caf-msm8992",
-    "revision": "android-8.0"
-  },
-  {
-    "remote": "omnirom",
-    "repository": "android_hardware_qcom_media-caf-msm8992",
-    "target_path": "hardware/qcom/media-caf-msm8992",
-    "revision": "android-8.0"
-  },
-  {
-    "remote": "omnirom",
     "repository": "vendor_qcom_opensource_dataservices",
     "target_path": "vendor/qcom/opensource/dataservices",
     "revision": "android-8.0"
