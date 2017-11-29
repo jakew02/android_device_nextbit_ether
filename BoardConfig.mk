@@ -216,4 +216,6 @@ TARGET_OTA_ASSERT_DEVICE := none
 # Include system properties in separate system.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
+TARGET_FS_CONFIG_GEN += device/nextbit/ether/configs/config.fs
+
 -include vendor/nextbit/ether/BoardConfigVendor.mk
