@@ -71,8 +71,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 
 TARGET_USES_64_BIT_BINDER := true
 
-USE_CLANG_PLATFORM_BUILD := true
-
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
