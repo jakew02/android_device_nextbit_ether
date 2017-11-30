@@ -175,11 +175,6 @@ PROTOBUF_SUPPORTED := true
 # Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy
-
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true

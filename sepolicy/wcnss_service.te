@@ -1,2 +1,0 @@
-allow wcnss_service self:capability { net_raw };
-allow wcnss_service self:capability { dac_override dac_read_search };
