@@ -199,22 +199,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.msm8992
 
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libdivxdrmdecrypt \
-    libOmxAacEnc \
-    libOmxAmrEnc \
+    libstagefrighthw \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxSwVencMpeg4 \
+    libmm-omxcore \
     libOmxVdec \
     libOmxVdecHevc \
-    libOmxVenc \
-    libOmxVidcCommon \
-    libmm-omxcore \
-    libstagefrighthw
+    libOmxVenc
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
