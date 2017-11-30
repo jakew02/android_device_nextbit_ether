@@ -164,8 +164,8 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_INCREASES_COLDBOOT_TIMEOUT := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_ether
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ether
+#TARGET_INIT_VENDOR_LIB := libinit_ether
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_ether
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
