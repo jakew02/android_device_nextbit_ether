@@ -223,4 +223,6 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 TARGET_FS_CONFIG_GEN += device/nextbit/ether/configs/config.fs
 
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 -include vendor/nextbit/ether/BoardConfigVendor.mk
